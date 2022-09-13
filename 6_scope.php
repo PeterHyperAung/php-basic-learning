@@ -5,6 +5,7 @@ $name = 'Bob';
 
 function hello(){
     global $name;
+    $name = "Peter"; // you can not only use variable but also overwrite it after declaration it globally in the function
     echo $name;
 }
 
