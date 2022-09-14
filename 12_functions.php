@@ -70,6 +70,7 @@ function hello2(&$n) {
     $n = "Bob";
     echo "Hello $n";
 }
+
 hello2($name); // Hello Bob
 echo $name; // Bob
 
@@ -119,3 +120,16 @@ $testnum = 5;
 $arrow = fn ($n) => $n * 5;
 
 echo $arrow(10);
+
+// Named arguments
+
+function profile($name, $age, $gmail){
+    return $name . $age . "@" . $gmail;
+}
+
+// when you use named arguments, they don't need to be in order anymore
+echo profile(
+    gmail: "peteraungmpa2006@gmail.com",
+    name: "Min Phone Aung",
+    age: 15, // you can add trailing comma
+);
