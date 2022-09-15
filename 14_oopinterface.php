@@ -95,6 +95,9 @@ echo Calculator::class; // Namespace
 
 class MathCls
 {
+    const PI = 3.14;
+    private $name;
+
     public function __call($name, $args)
     {
         echo "Method $name doesn't exists";
@@ -105,15 +108,41 @@ class MathCls
         echo "Static method $name doesn't exists";
     }
 
-    public function __invoke()
+    public function __invoke() 
     {
         echo "This is not a function";
     }
+
+    public function __get($name)
+    {
+        echo "Cannot get $name";
+    }
+
+    public function __set($name, $value)
+    {
+        echo "Cannot set $name with $value";
+    }
+
+    public function __toString()
+    {
+        return "PI = ".static::PI;
+    }
 }
 
-$obj = new Math;
+$obj = new MathCls;
+echo $obj->PI;
+$obj->PI = 3.142;
 $obj->add(); // Method add doesn't exists.
+echo $obj;
+MathCls::add(); // Static method add doesn't exists.
 
-Math::add(); // Static method add doesn't exists.
+// __call -> when a method is called in a normal way but it doesn't exist, this will be called
+// __invoke -> will be executed when the object is executed like a function
+// __callstatic -> when a static method is called but it doesn't exist, this will be called
+// __toString -> when an object has to be converted into string, this function will be run;
 
+// getter and setter __get and __set
+// __get -> in a situation like when trying to access private or protected properites or method, that method will be run
+// __set -> in a situation like when trying to overwrite private or protected properites or method, that method will be run
 
+// magic methods are useful but you won't be encouraged to use them because if you can't use them correctly, that will make a chaos in your code

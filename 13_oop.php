@@ -152,5 +152,4 @@ class Sweet extends Food
 }
 
 
-// design patterns are the way to write code or solve common problems
-// 
+// design patterns are the way to write code or solve common problems in a much effiecnt way
