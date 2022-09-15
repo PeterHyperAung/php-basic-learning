@@ -39,3 +39,28 @@ class Car
 
 $car = new Car;
 $car->start();
+
+// the useage can be vary depending on the developers
+// Laravel use Facade class like this
+
+
+class Facede
+{
+    static function __callStatic($name, $args)
+    {
+        $name = strtoupper($name);
+        $arg = $args[0] ?? "/";
+        echo "Sending $name to $arg";
+    }
+}
+
+class Route extends Facede
+{
+//
+}
+
+Route::get("/comments");
+// Sending GET to /comments
+Route::post();
+// Sending POST to /
+
