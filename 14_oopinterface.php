@@ -81,7 +81,6 @@ class Calculator
 }
 
 // traits are not class, traits are things that can be used by the class
-
 $calc = new Calculator;
 $calc->add(1, 2);
 $calc->circle(5);

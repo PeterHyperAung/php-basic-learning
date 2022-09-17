@@ -8,7 +8,7 @@ class Animal
     private $age = 3;
     protected $protect = 'protected value';
     
-    // when u use final keyword, the method or property can't be overwrite from the child class. You can also use this one class
+    // when u use final keyword, the method or property can't be overwrite from the child class. You can also use this one for classes
     final public function run($name){ 
         $this->name = $name; // and then assign here
         echo "$this->name is running";
@@ -39,7 +39,7 @@ $cat = new Animal('Kitty');
 
 var_dump($dog);
 
-// Constructor (works when the class is instantiated)
+// Constructor (works right away when the class is instantiated)
 
 // for php version 5 and older
 /*
@@ -71,7 +71,6 @@ $human = new Person("Peter"); // you will get error if  you don't add parathesis
 // Constructor property promotion makes the process easier for property assigned inside the constructor easier
 
 // when u use final keyword on a class, the class can no longer inherited
-// when u use 
 final class Animal2
 {
     public function __construct(private $name) // two steps are reduced: Declaring and assigning
@@ -152,4 +151,4 @@ class Sweet extends Food
 }
 
 
-// design patterns are the way to write code or solve common problems in a much effiecnt way
+// design patterns are the way to write code or solve common problems in a much effcient way

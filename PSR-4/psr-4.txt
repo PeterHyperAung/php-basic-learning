@@ -1,0 +1,5 @@
+- when you name namespace, you can give any name you want
+- you can add sub-namespace as much as you want
+- you shoule use pascal case for namespace name and namespace name and file name should be the same
+- sub-namespace path and folder path should be the same  
+

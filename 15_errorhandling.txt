@@ -1,0 +1,16 @@
+- PHP has all togther 16 error types.
+- 7 of them are essential.
+- E_PARSE -> the code wasn't even executed due to syntax error
+- E_ERROR -> Fatal error -> which stops the entire program
+- E_WARNING -> Program keeps working but something huge is wrong
+- E_NOTICE -> When there is a possible error
+- E_STRICT -> This happen when u use bad practice code while using strict mode (like you hint the type for function parameters; u give the wrong type; PHP converts it and uses it)
+- strict mode activation -> declare(strict_types=1);
+- E_DEPRECATED -> Deprecated Error occur when u use the feature that u shouldn't use or the old feature that is no longer supported
+- E_ALL -> All types of errors
+- this setting is in php.ini
+- error configuration in the file -> function -> error_reporting();
+- error_reporting(0); -> show no error
+- error_reporting(E_ALL) or error_reporting(-1) -> show all errors
+- error_reporting(E_PARSE || E_ERROR || E_WARNING) -> only parse error, fatal error and warning
+- error_reporting(E_ALL  & ~E_NOTICE); -> all errors except notice

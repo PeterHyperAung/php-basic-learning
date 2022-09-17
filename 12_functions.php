@@ -103,7 +103,7 @@ $result = array_map(function ($n) { // this function right here
 print_r($result);
 
 // assigning a function expression and use statement for using outter scope variables
-// use statement use the pass by value technique
+// use statement use the pass by value technique; This technique doesn't mutate the variables
 
 $incrementAge = function($n) use($name) {
     $name = "Peter"; // outter value won't change

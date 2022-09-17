@@ -1,0 +1,40 @@
+package naming convention
+*composer init
+- vendor/name
+vendor is company or organization name and name is the project name
+After u finish it, u'll get composer.json file with the configuration inside it
+
+List of packages that you can download with composer
+url - https://packagist.org/
+
+Downloading with composer
+*composer require package
+i.e - composer require nesbot/carbon
+carbon package which is coded by a developer called nesbot
+composer stores it in vendor folder
+composer will install not only the dependency you want but also dependency's dependencies
+installed packages will be included in composer.json file inside the object with the property called require
+
+*composer install
+This command simply check the require packages in composer.json file and install them
+In this way, you'll only need to give composer.json file instead of sharing all the dependencies while collaborating
+
+- composer automatically include autoload.php when you install dependencies
+
+If you want to use autoload.php for your own files, 
+- you have to follow PSR-4 rules 
+- autoload section in composer.json
+- *composer dump-autoload (to activate the changes in composer.json file)
+
+```
+"autoload": {
+    "psr-4": {
+        "App\\": "App/"
+    }
+}
+```
+Section explanation -> if it is namespace App, the folder is App folder
+
+*composer create-project developer/package projectname
+- Suitable command for creating project and installing at the same time
+

@@ -9,7 +9,7 @@ function hello(){
     echo $name;
 }
 
-hello(); // Warning: Undefined variable $name
+hello(); // Warning: Undefined variable $name, if you don't use the global keyword inside the function
 
 function block_scope(){
     if(true){

@@ -1,0 +1,17 @@
+{
+  "name": "peter-aung/composer",
+  "authors": [
+    {
+      "name": "PeterHyperAung",
+      "email": "peteraungmpa2006@gmail.com"
+    }
+  ],
+  "require": {
+    "nesbot/carbon": "^2.62"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "App/"
+    }
+  }
+}
